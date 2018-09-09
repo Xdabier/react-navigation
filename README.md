@@ -4,6 +4,28 @@
 
 React Navigation is born from the React Native community's need for an extensible yet easy-to-use navigation solution based on Javascript.
 
+## About this fork
+Added the ability to hide specific titles from the tab bar
+ #### usage: 
+ in `tabBarOptions` add `tabKeyToHideLabel` where it contains a string of the tabs names to hide, Example: 
+ 
+`const MainTabsNavigation = createMaterialTopTabNavigator(
+    {
+        Discover: DiscoverTab,
+        Messages: MessagesTab,
+        Notifications: NotificationsTab,
+        Profile: ProfileTab
+    }, {
+        ....
+        tabBarOptions: {
+            ...
+            tabKeyToHideLabel: 'ProfileNotifications',
+            ....
+        }
+    }
+);`
+
+
 ## Installation
 
 Since the library is a JS-based solution, to install the latest version of react-navigation you only need to run:
